@@ -4228,3 +4228,15 @@ UI_method_set_ex_data                   4178	1_1_1	EXIST::FUNCTION:UI
 UI_method_get_ex_data                   4179	1_1_1	EXIST::FUNCTION:UI
 UI_UTIL_wrap_read_pem_callback          4180	1_1_1	EXIST::FUNCTION:UI
 X509_VERIFY_PARAM_get_time              4181	1_1_0d	EXIST::FUNCTION:
+TS_RESP_CTX_set_ess_cert_id_digest      4182	1_1_1	EXIST::FUNCTION:TS
+i2d_ESS_SIGNING_CERT_V2                 4183	1_1_1	EXIST::FUNCTION:TS
+ESS_SIGNING_CERT_V2_dup                 4184	1_1_1	EXIST::FUNCTION:TS
+ESS_CERT_ID_V2_new                      4185	1_1_1	EXIST::FUNCTION:TS
+i2d_ESS_CERT_ID_V2                      4186	1_1_1	EXIST::FUNCTION:TS
+d2i_ESS_SIGNING_CERT_V2                 4187	1_1_1	EXIST::FUNCTION:TS
+ESS_SIGNING_CERT_V2_free                4188	1_1_1	EXIST::FUNCTION:TS
+ESS_SIGNING_CERT_V2_new                 4189	1_1_1	EXIST::FUNCTION:TS
+d2i_ESS_CERT_ID_V2                      4190	1_1_1	EXIST::FUNCTION:TS
+ESS_CERT_ID_V2_free                     4191	1_1_1	EXIST::FUNCTION:TS
+ESS_CERT_ID_V2_dup                      4192	1_1_1	EXIST::FUNCTION:TS
+TS_CONF_set_ess_cert_id_digest          4193	1_1_1	EXIST::FUNCTION:TS
