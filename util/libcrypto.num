@@ -4230,3 +4230,15 @@ UINT32_it                               4214	1_1_0f	EXIST:!EXPORT_VAR_AS_FUNCTIO
 UINT32_it                               4214	1_1_0f	EXIST:EXPORT_VAR_AS_FUNCTION:FUNCTION:
 ZINT64_it                               4215	1_1_0f	EXIST:!EXPORT_VAR_AS_FUNCTION:VARIABLE:
 ZINT64_it                               4215	1_1_0f	EXIST:EXPORT_VAR_AS_FUNCTION:FUNCTION:
+ESS_SIGNING_CERT_V2_new                 4216    1_1_0f  EXIST::FUNCTION:
+d2i_ESS_CERT_ID_V2                      4217    1_1_0f  EXIST::FUNCTION:
+i2d_ESS_CERT_ID_V2                      4218    1_1_0f  EXIST::FUNCTION:
+ESS_SIGNING_CERT_V2_dup                 4219    1_1_0f  EXIST::FUNCTION:
+ESS_SIGNING_CERT_V2_free                4220    1_1_0f  EXIST::FUNCTION:
+ESS_CERT_ID_V2_free                     4221    1_1_0f  EXIST::FUNCTION:
+i2d_ESS_SIGNING_CERT_V2                 4222    1_1_0f  EXIST::FUNCTION:
+ESS_CERT_ID_V2_new                      4223    1_1_0f  EXIST::FUNCTION:
+d2i_ESS_SIGNING_CERT_V2                 4224    1_1_0f  EXIST::FUNCTION:
+ESS_CERT_ID_V2_dup                      4225    1_1_0f  EXIST::FUNCTION:
+TS_RESP_CTX_set_ess_cert_id_digest      4226    1_1_0f  EXIST::FUNCTION:
+TS_CONF_set_ess_cert_id_digest          4227    1_1_0f  EXIST::FUNCTION:
