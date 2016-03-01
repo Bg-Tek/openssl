@@ -10,7 +10,7 @@
  */
 
 /* Serialized OID's */
-static const unsigned char so[6765] = {
+static const unsigned char so[6776] = {
     0x2A,0x86,0x48,0x86,0xF7,0x0D,                 /* [    0] OBJ_rsadsi */
     0x2A,0x86,0x48,0x86,0xF7,0x0D,0x01,            /* [    6] OBJ_pkcs */
     0x2A,0x86,0x48,0x86,0xF7,0x0D,0x02,0x02,       /* [   13] OBJ_md2 */
@@ -961,9 +961,10 @@ static const unsigned char so[6765] = {
     0x2A,0x86,0x48,0x86,0xF7,0x0D,0x01,0x09,0x10,0x01,0x13,  /* [ 6731] OBJ_id_smime_ct_contentCollection */
     0x2A,0x86,0x48,0x86,0xF7,0x0D,0x01,0x09,0x10,0x01,0x17,  /* [ 6742] OBJ_id_smime_ct_authEnvelopedData */
     0x2A,0x86,0x48,0x86,0xF7,0x0D,0x01,0x09,0x10,0x01,0x1C,  /* [ 6753] OBJ_id_ct_xml */
+    0x2A,0x86,0x48,0x86,0xF7,0x0D,0x01,0x09,0x10,0x02,0x1E,  /* [ 6764] OBJ_id_smime_aa_signingCertificateV2 */
 };
 
-#define NUM_NID 1061
+#define NUM_NID 1062
 static const ASN1_OBJECT nid_objs[NUM_NID] = {
     {"UNDEF", "undefined", NID_undef},
     {"rsadsi", "RSA Data Security, Inc.", NID_rsadsi, 6, &so[0]},
@@ -2026,9 +2027,10 @@ static const ASN1_OBJECT nid_objs[NUM_NID] = {
     {"id-smime-ct-contentCollection", "id-smime-ct-contentCollection", NID_id_smime_ct_contentCollection, 11, &so[6731]},
     {"id-smime-ct-authEnvelopedData", "id-smime-ct-authEnvelopedData", NID_id_smime_ct_authEnvelopedData, 11, &so[6742]},
     {"id-ct-xml", "id-ct-xml", NID_id_ct_xml, 11, &so[6753]},
+    {"id-smime-aa-signingCertificateV2", "id-smime-aa-signingCertificateV2", NID_id_smime_aa_signingCertificateV2, 11, &so[6764]},
 };
 
-#define NUM_SN 1052
+#define NUM_SN 1053
 static const unsigned int sn_objs[NUM_SN] = {
      364,    /* "AD_DVCS" */
      419,    /* "AES-128-CBC" */
@@ -2647,6 +2649,7 @@ static const unsigned int sn_objs[NUM_SN] = {
      213,    /* "id-smime-aa-securityLabel" */
      239,    /* "id-smime-aa-signatureType" */
      223,    /* "id-smime-aa-signingCertificate" */
+    1061,    /* "id-smime-aa-signingCertificateV2" */
      224,    /* "id-smime-aa-smimeEncryptCerts" */
      225,    /* "id-smime-aa-timeStampToken" */
      192,    /* "id-smime-alg" */
@@ -3084,7 +3087,7 @@ static const unsigned int sn_objs[NUM_SN] = {
      160,    /* "x509Crl" */
 };
 
-#define NUM_LN 1052
+#define NUM_LN 1053
 static const unsigned int ln_objs[NUM_LN] = {
      363,    /* "AD Time Stamping" */
      405,    /* "ANSI X9.62" */
@@ -3699,6 +3702,7 @@ static const unsigned int ln_objs[NUM_LN] = {
      213,    /* "id-smime-aa-securityLabel" */
      239,    /* "id-smime-aa-signatureType" */
      223,    /* "id-smime-aa-signingCertificate" */
+    1061,    /* "id-smime-aa-signingCertificateV2" */
      224,    /* "id-smime-aa-smimeEncryptCerts" */
      225,    /* "id-smime-aa-timeStampToken" */
      192,    /* "id-smime-alg" */
@@ -4140,7 +4144,7 @@ static const unsigned int ln_objs[NUM_LN] = {
      125,    /* "zlib compression" */
 };
 
-#define NUM_OBJ 956
+#define NUM_OBJ 957
 static const unsigned int obj_objs[NUM_OBJ] = {
        0,    /* OBJ_undef                        0 */
      181,    /* OBJ_iso                          1 */
@@ -5068,6 +5072,7 @@ static const unsigned int obj_objs[NUM_OBJ] = {
      238,    /* OBJ_id_smime_aa_ets_archiveTimeStamp 1 2 840 113549 1 9 16 2 27 */
      239,    /* OBJ_id_smime_aa_signatureType    1 2 840 113549 1 9 16 2 28 */
      240,    /* OBJ_id_smime_aa_dvcs_dvc         1 2 840 113549 1 9 16 2 29 */
+    1061,    /* OBJ_id_smime_aa_signingCertificateV2 1 2 840 113549 1 9 16 2 30 */
      241,    /* OBJ_id_smime_alg_ESDHwith3DES    1 2 840 113549 1 9 16 3 1 */
      242,    /* OBJ_id_smime_alg_ESDHwithRC2     1 2 840 113549 1 9 16 3 2 */
      243,    /* OBJ_id_smime_alg_3DESwrap        1 2 840 113549 1 9 16 3 3 */
