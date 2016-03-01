@@ -123,6 +123,11 @@ typedef struct ESS_signing_cert ESS_SIGNING_CERT;
 
 DEFINE_STACK_OF(ESS_CERT_ID)
 
+typedef struct ESS_cert_id_v2 ESS_CERT_ID_V2;
+typedef struct ESS_signing_cert_v2 ESS_SIGNING_CERT_V2;
+
+DEFINE_STACK_OF(ESS_CERT_ID_V2)
+
 typedef struct TS_resp_st TS_RESP;
 
 TS_REQ *TS_REQ_new(void);
@@ -217,6 +222,22 @@ int i2d_ESS_SIGNING_CERT(const ESS_SIGNING_CERT *a, unsigned char **pp);
 ESS_SIGNING_CERT *d2i_ESS_SIGNING_CERT(ESS_SIGNING_CERT **a,
                                        const unsigned char **pp, long length);
 ESS_SIGNING_CERT *ESS_SIGNING_CERT_dup(ESS_SIGNING_CERT *a);
+
+ESS_CERT_ID_V2 *ESS_CERT_ID_V2_new(void);
+void ESS_CERT_ID_V2_free(ESS_CERT_ID_V2 * a);
+int i2d_ESS_CERT_ID_V2(const ESS_CERT_ID_V2 * a, unsigned char **pp);
+ESS_CERT_ID_V2 *d2i_ESS_CERT_ID_V2(ESS_CERT_ID_V2 ** a,
+                                   const unsigned char **pp, long length);
+ESS_CERT_ID_V2 *ESS_CERT_ID_V2_dup(ESS_CERT_ID_V2 * a);
+
+ESS_SIGNING_CERT_V2 *ESS_SIGNING_CERT_V2_new(void);
+void ESS_SIGNING_CERT_V2_free(ESS_SIGNING_CERT_V2 * a);
+int i2d_ESS_SIGNING_CERT_V2(const ESS_SIGNING_CERT_V2 * a,
+                            unsigned char **pp);
+ESS_SIGNING_CERT_V2 *d2i_ESS_SIGNING_CERT_V2(ESS_SIGNING_CERT_V2 ** a,
+                                             const unsigned char **pp,
+                                             long length);
+ESS_SIGNING_CERT_V2 *ESS_SIGNING_CERT_V2_dup(ESS_SIGNING_CERT_V2 * a);
 
 void ERR_load_TS_strings(void);
 
@@ -377,6 +398,8 @@ int TS_RESP_CTX_set_signer_key(TS_RESP_CTX *ctx, EVP_PKEY *key);
 
 int TS_RESP_CTX_set_signer_digest(TS_RESP_CTX *ctx,
                                   const EVP_MD *signer_digest);
+
+int TS_RESP_CTX_set_ess_cert_id_digest(TS_RESP_CTX *ctx, const EVP_MD *md);
 
 /* This parameter must be set. */
 int TS_RESP_CTX_set_def_policy(TS_RESP_CTX *ctx, ASN1_OBJECT *def_policy);
@@ -586,6 +609,8 @@ int TS_CONF_set_ordering(CONF *conf, const char *section, TS_RESP_CTX *ctx);
 int TS_CONF_set_tsa_name(CONF *conf, const char *section, TS_RESP_CTX *ctx);
 int TS_CONF_set_ess_cert_id_chain(CONF *conf, const char *section,
                                   TS_RESP_CTX *ctx);
+int TS_CONF_set_ess_cert_id_digest(CONF *conf, const char *section,
+                                      TS_RESP_CTX *ctx);
 
 /* -------------------------------------------------- */
 /* BEGIN ERROR CODES */
@@ -602,8 +627,11 @@ void ERR_load_TS_strings(void);
 # define TS_F_DEF_SERIAL_CB                               110
 # define TS_F_DEF_TIME_CB                                 111
 # define TS_F_ESS_ADD_SIGNING_CERT                        112
+# define TS_F_ESS_ADD_SIGNING_CERT_V2                     156
 # define TS_F_ESS_CERT_ID_NEW_INIT                        113
+# define TS_F_ESS_CERT_ID_V2_NEW_INIT                     157
 # define TS_F_ESS_SIGNING_CERT_NEW_INIT                   114
+# define TS_F_ESS_SIGNING_CERT_V2_NEW_INIT                158
 # define TS_F_INT_TS_RESP_VERIFY_TOKEN                    149
 # define TS_F_PKCS7_TO_TS_TST_INFO                        148
 # define TS_F_TS_ACCURACY_SET_MICROS                      115
@@ -666,6 +694,7 @@ void ERR_load_TS_strings(void);
 # define TS_R_D2I_TS_RESP_INT_FAILED                      128
 # define TS_R_DETACHED_CONTENT                            134
 # define TS_R_ESS_ADD_SIGNING_CERT_ERROR                  116
+# define TS_R_ESS_ADD_SIGNING_CERT_V2_ERROR               139
 # define TS_R_ESS_SIGNING_CERTIFICATE_ERROR               101
 # define TS_R_INVALID_NULL_POINTER                        102
 # define TS_R_INVALID_SIGNER_CERTIFICATE_PURPOSE          117

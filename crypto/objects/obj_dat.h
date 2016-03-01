@@ -60,12 +60,12 @@
  * [including the GNU Public Licence.]
  */
 
-#define NUM_NID 1036
-#define NUM_SN 1029
-#define NUM_LN 1029
-#define NUM_OBJ 951
+#define NUM_NID 1037
+#define NUM_SN 1030
+#define NUM_LN 1030
+#define NUM_OBJ 952
 
-static const unsigned char lvalues[6722]={
+static const unsigned char lvalues[6733]={
 0x2A,0x86,0x48,0x86,0xF7,0x0D,               /* [  0] OBJ_rsadsi */
 0x2A,0x86,0x48,0x86,0xF7,0x0D,0x01,          /* [  6] OBJ_pkcs */
 0x2A,0x86,0x48,0x86,0xF7,0x0D,0x02,0x02,     /* [ 13] OBJ_md2 */
@@ -1011,6 +1011,7 @@ static const unsigned char lvalues[6722]={
 0x2B,0x06,0x01,0x05,0x02,0x03,0x05,          /* [6696] OBJ_pkInitKDC */
 0x2B,0x06,0x01,0x04,0x01,0xDA,0x47,0x0F,0x01,/* [6703] OBJ_X25519 */
 0x2B,0x06,0x01,0x04,0x01,0xDA,0x47,0x0F,0x02,/* [6712] OBJ_X448 */
+0x2A,0x86,0x48,0x86,0xF7,0x0D,0x01,0x09,0x10,0x02,0x2F,/* [6721] OBJ_id_smime_aa_signingCertificateV2 */
 };
 
 static const ASN1_OBJECT nid_objs[NUM_NID]={
@@ -2704,6 +2705,9 @@ static const ASN1_OBJECT nid_objs[NUM_NID]={
 {"pkInitKDC","Signing KDC Response",NID_pkInitKDC,7,&(lvalues[6696]),0},
 {"X25519","X25519",NID_X25519,9,&(lvalues[6703]),0},
 {"X448","X448",NID_X448,9,&(lvalues[6712]),0},
+{"id-smime-aa-signingCertificateV2",
+	"id-smime-aa-signingCertificateV2",
+	NID_id_smime_aa_signingCertificateV2,11,&(lvalues[6721]),0},
 };
 
 static const unsigned int sn_objs[NUM_SN]={
@@ -3303,6 +3307,7 @@ static const unsigned int sn_objs[NUM_SN]={
 213,	/* "id-smime-aa-securityLabel" */
 239,	/* "id-smime-aa-signatureType" */
 223,	/* "id-smime-aa-signingCertificate" */
+1036,	/* "id-smime-aa-signingCertificateV2" */
 224,	/* "id-smime-aa-smimeEncryptCerts" */
 225,	/* "id-smime-aa-timeStampToken" */
 192,	/* "id-smime-alg" */
@@ -4340,6 +4345,7 @@ static const unsigned int ln_objs[NUM_LN]={
 213,	/* "id-smime-aa-securityLabel" */
 239,	/* "id-smime-aa-signatureType" */
 223,	/* "id-smime-aa-signingCertificate" */
+1036,	/* "id-smime-aa-signingCertificateV2" */
 224,	/* "id-smime-aa-smimeEncryptCerts" */
 225,	/* "id-smime-aa-timeStampToken" */
 192,	/* "id-smime-alg" */
@@ -5694,6 +5700,7 @@ static const unsigned int obj_objs[NUM_OBJ]={
 238,	/* OBJ_id_smime_aa_ets_archiveTimeStamp 1 2 840 113549 1 9 16 2 27 */
 239,	/* OBJ_id_smime_aa_signatureType    1 2 840 113549 1 9 16 2 28 */
 240,	/* OBJ_id_smime_aa_dvcs_dvc         1 2 840 113549 1 9 16 2 29 */
+1036,	/* OBJ_id_smime_aa_signingCertificateV2 1 2 840 113549 1 9 16 2 47 */
 241,	/* OBJ_id_smime_alg_ESDHwith3DES    1 2 840 113549 1 9 16 3 1 */
 242,	/* OBJ_id_smime_alg_ESDHwithRC2     1 2 840 113549 1 9 16 3 2 */
 243,	/* OBJ_id_smime_alg_3DESwrap        1 2 840 113549 1 9 16 3 3 */

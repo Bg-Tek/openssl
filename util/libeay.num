@@ -4804,3 +4804,15 @@ CT_verify_no_bad_scts                   5307	1_1_0	EXIST::FUNCTION:
 EVP_PKEY_CTX_hex2ctrl                   5308	1_1_0	EXIST::FUNCTION:
 EVP_PKEY_CTX_str2ctrl                   5309	1_1_0	EXIST::FUNCTION:
 ERR_load_KDF_strings                    5310	1_1_0	EXIST::FUNCTION:
+ESS_SIGNING_CERT_V2_new                 5311	1_1_0	EXIST::FUNCTION:
+d2i_ESS_CERT_ID_V2                      5312	1_1_0	EXIST::FUNCTION:
+i2d_ESS_CERT_ID_V2                      5314	1_1_0	EXIST::FUNCTION:
+ESS_SIGNING_CERT_V2_dup                 5315	1_1_0	EXIST::FUNCTION:
+ESS_SIGNING_CERT_V2_free                5317	1_1_0	EXIST::FUNCTION:
+ESS_CERT_ID_V2_free                     5318	1_1_0	EXIST::FUNCTION:
+i2d_ESS_SIGNING_CERT_V2                 5320	1_1_0	EXIST::FUNCTION:
+ESS_CERT_ID_V2_new                      5321	1_1_0	EXIST::FUNCTION:
+d2i_ESS_SIGNING_CERT_V2                 5322	1_1_0	EXIST::FUNCTION:
+ESS_CERT_ID_V2_dup                      5323	1_1_0	EXIST::FUNCTION:
+TS_RESP_CTX_set_ess_cert_id_digest      5324	1_1_0	EXIST::FUNCTION:
+TS_CONF_set_ess_cert_id_digest          5325	1_1_0	EXIST::FUNCTION:
