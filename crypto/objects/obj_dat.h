@@ -961,7 +961,7 @@ static const unsigned char so[6776] = {
     0x2A,0x86,0x48,0x86,0xF7,0x0D,0x01,0x09,0x10,0x01,0x13,  /* [ 6731] OBJ_id_smime_ct_contentCollection */
     0x2A,0x86,0x48,0x86,0xF7,0x0D,0x01,0x09,0x10,0x01,0x17,  /* [ 6742] OBJ_id_smime_ct_authEnvelopedData */
     0x2A,0x86,0x48,0x86,0xF7,0x0D,0x01,0x09,0x10,0x01,0x1C,  /* [ 6753] OBJ_id_ct_xml */
-    0x2A,0x86,0x48,0x86,0xF7,0x0D,0x01,0x09,0x10,0x02,0x1E,  /* [ 6764] OBJ_id_smime_aa_signingCertificateV2 */
+    0x2A,0x86,0x48,0x86,0xF7,0x0D,0x01,0x09,0x10,0x02,0x2F,  /* [ 6764] OBJ_id_smime_aa_signingCertificateV2 */
 };
 
 #define NUM_NID 1062
@@ -5072,7 +5072,7 @@ static const unsigned int obj_objs[NUM_OBJ] = {
      238,    /* OBJ_id_smime_aa_ets_archiveTimeStamp 1 2 840 113549 1 9 16 2 27 */
      239,    /* OBJ_id_smime_aa_signatureType    1 2 840 113549 1 9 16 2 28 */
      240,    /* OBJ_id_smime_aa_dvcs_dvc         1 2 840 113549 1 9 16 2 29 */
-    1061,    /* OBJ_id_smime_aa_signingCertificateV2 1 2 840 113549 1 9 16 2 30 */
+    1061,    /* OBJ_id_smime_aa_signingCertificateV2 1 2 840 113549 1 9 16 2 47 */
      241,    /* OBJ_id_smime_alg_ESDHwith3DES    1 2 840 113549 1 9 16 3 1 */
      242,    /* OBJ_id_smime_alg_ESDHwithRC2     1 2 840 113549 1 9 16 3 2 */
      243,    /* OBJ_id_smime_alg_3DESwrap        1 2 840 113549 1 9 16 3 3 */
